@@ -1,0 +1,11 @@
+node-hero-tutorial:
+  image: bradleybossard/docker-node-devbox 
+  volumes:
+    - ".:/src"
+  ports:
+    - "8088:3000"
+  environment:
+    - VIRTUAL_HOST=node-hero.bradleybossard.com
+    - LETSENCRYPT_HOST=node-hero.bradleybossard.com
+    - LETSENCRYPT_EMAIL=bradleybossard@gmail.com
+  command: tail -f /dev/null
